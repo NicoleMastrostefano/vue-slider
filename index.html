@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Vue-Slider</title>
+  </head>
+  <body>
+    <div id="root">
+      <div id="container">
+        <div class="prev"><i class="fas fa-chevron-left" @click="prevImage"></i></div>
+        <div class="slide">
+        <img v-bind:src="images[imageIndex]" alt=""></div>
+        <div class="next">
+        <i class="fas fa-chevron-right" @click="nextImage"></i> </div>
+      </div>
+      </div>
+    </div>
+
+
+     <script src="js/script.js" charset="utf-8"></script>
+
+  </body>
+</html>
