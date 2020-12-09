@@ -11,7 +11,6 @@ var app= new Vue(
         ]
     },
 
-
     methods:{
       nextImage: function(){
         this.imageIndex ++;
@@ -24,6 +23,10 @@ var app= new Vue(
         if (this.imageIndex== -1){
           this.imageIndex= this.images.length -1;
         }
+      },
+
+      dotsclick: function(index){
+        (this.imageIndex = index)
       }
     }
   }

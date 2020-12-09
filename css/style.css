@@ -58,11 +58,7 @@
 
 .dots i {
   padding: 10px;
-  color: #4D425C;
+  color:#C3D5AE;
   font-size: 14px;
   cursor: pointer;
-}
-
-.dots i.active {
-  color:#C3D5AE;
 }
