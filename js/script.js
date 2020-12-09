@@ -8,17 +8,26 @@ var app= new Vue(
         "https://www.pronerding.it/wp-content/uploads/2019/08/janna-copertina-.jpg",
         "https://www.pronerding.it/wp-content/uploads/2019/08/karma-copertina-.jpg",
         "https://www.pronerding.it/wp-content/uploads/2019/08/syndra-copertina-.jpg"
-        ]
+      ],
+      autoplay:""
+    },
+
+    created:function(){
+      this.autoplay = setInterval(
+        () => this.nextImage(),5000
+      )
     },
 
     methods:{
       nextImage: function(){
+        clearInterval(this.autoplay);
         this.imageIndex ++;
         if (this.imageIndex==this.images.length){
           this.imageIndex=0
         }
       },
       prevImage: function(){
+        clearInterval(this.autoplay);
         this.imageIndex --;
         if (this.imageIndex== -1){
           this.imageIndex= this.images.length -1;
